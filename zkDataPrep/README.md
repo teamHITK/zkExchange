@@ -27,3 +27,20 @@ This diagram is a representation of a similar Merkle Sum Tree
   ```
   $ npm i @0xagnish/zk-data-prep
   ```
+
+### For Database
+
+- Import your database to a csv file, for example [this](zkDataPrep/test/entryPatterns/entry-15-valid.csv)
+
+## API Guide
+
+### new MerkleSumTree (pathToCsv : string) : MerkleSumTree
+
+```code
+import {MerkleSumTree} from "0xagnish/zk-data-prep";
+
+const pathToCsv = "test/entryPatterns/entry-16-valid.csv";
+
+const tree = new MerkleSumTree(pathToCsv)
+//constructs a tree using the given entries in the csv dataset
+```
