@@ -15,4 +15,15 @@ A merkle sum tree is a binary Merkle Tree with the following properties:
 - Each non-leaf node contains a hash and a sum. The hash is equal to `h(left_child.hash, left_child.sum, right_child.hash, right_child.sum)`. The sum is therefore equal to the sum of the sum of it's children.
 - The root node represents the executed/constructed state of the tree and contains all the users'/entry balances. The `merkleSumTree()` is a Typescript implementation of a Merkle Sum Tree and it provides all the functions to construct the above mentioned modified Merkle Tree by just ingesting data from a csv file, picking up only the `username -> balance`.
 
+This diagram is a representation of a similar Merkle Sum Tree
+
 ![image](https://github.com/teamHITK/zkExchange/assets/80243668/cc873986-05f6-40a3-bf1a-1995497341e8)
+
+## Setup
+
+### Installing the package
+
+- The package can be directly installed from the npm registry with the following command:
+  ```
+  $ npm i @0xagnish/zk-data-prep
+  ```
