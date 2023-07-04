@@ -17,7 +17,7 @@ A merkle sum tree is a binary Merkle Tree with the following properties:
 
 This diagram is a representation of a similar Merkle Sum Tree
 
-![image](https://github.com/teamHITK/zkExchange/assets/80243668/cc873986-05f6-40a3-bf1a-1995497341e8)
+![image](https://github.com/teamHITK/zkExchange/assets/80243668/49f3907f-4357-4967-8914-6a6de76fb78d)
 
 ## Setup
 
