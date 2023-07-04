@@ -36,11 +36,11 @@ This diagram is a representation of a similar Merkle Sum Tree
 
 ### new MerkleSumTree (pathToCsv : string) : MerkleSumTree
 
-```code
-import {MerkleSumTree} from "0xagnish/zk-data-prep";
+```ts
+import { MerkleSumTree } from '0xagnish/zk-data-prep';
 
-const pathToCsv = "test/entryPatterns/entry-16-valid.csv";
+const pathToCsv = 'test/entryPatterns/entry-16-valid.csv';
 
-const tree = new MerkleSumTree(pathToCsv)
+const tree = new MerkleSumTree(pathToCsv);
 //constructs a tree using the given entries in the csv dataset
 ```
