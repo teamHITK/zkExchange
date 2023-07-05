@@ -102,5 +102,8 @@ tree.verifyProof(proof)
 # Benchmarking
 
 To construct a Merkle Sum Tree with 262144 (2**18 leaves) it takes:
-|108s  |Ubuntu  |8 GB  
-|154s  |Macbook Air M1  |8 GB
+| Time taken  | OS/Kernel  | RAM
+| -----  | -----  | -----
+| 108s  | Ubuntu  | 8 GB
+| 154s  | Macbook Air M1  | 8 GB
+
