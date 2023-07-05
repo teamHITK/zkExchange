@@ -30,7 +30,7 @@ This diagram is a representation of a similar Merkle Sum Tree
 
 ### For Database
 
-- Import your database to a csv file, for example [this](zkDataPrep/test/entryPatterns/entry-15-valid.csv)
+- Import your database to a csv file, for example [this](https://github.com/teamHITK/zkExchange/blob/master/zkDataPrep/test/entryPatterns/entry-16-valid.csv)
 
 ## API Guide
 
