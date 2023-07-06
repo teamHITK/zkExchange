@@ -93,7 +93,7 @@ A proof generated using the circuit, even if verified, doesn't ensure that the p
 
 - The package can be directly installed from the npm registry with the following command:
   ```
-  $ npm i @0xagnish/zk-data-prep
+  $ npm i @0xagnish/zkCircuits
   ```
 
 ## Build
