@@ -87,9 +87,9 @@ A proof generated using the circuit, even if verified, doesn't ensure that the p
 
 In order to compile the circuit, execute the trusted setup, generate the proof (and verify it) using groth16 as proving system run from the root directory:
 
-    ```
-    $ npm run build
-    ```
+```
+$ npm run build
+```
 
 The script will:
 
