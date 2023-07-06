@@ -56,11 +56,6 @@ The prover relies on [zkDataPrep](https://github.com/teamHITK/zkExchange/tree/ma
 
 ![image](https://github.com/teamHITK/zkExchange/assets/80243668/20e61f60-71ce-4781-8c86-10561a8eb133)
 
-## Workflow of the Circom Compiler and it's Dependencies
-
-![image](https://github.com/teamHITK/zkExchange/assets/80243668/8c6b0b3a-8b16-49bd-893d-f621c8bdfa93)
-
-
 The `ToLeafHash` component performs the poseidon hash of the `username` and the `balance` and outputs the `leafHash`. The `leafHash` is then used as the first `hash` in the `NextMerkleSumTreeLevel` component.
 
 The `NextMerkleSumTreeLevel` component recursively computes the current `hash` (for the first level it is the `leafHash`), the current `sum` (for the first level it is the `balance`), the current `siblingHash` and the current `siblingSum`. The output of the nextLevel component are the `nextHash` and the `nextSum`. These are calculated as follows:
@@ -84,9 +79,13 @@ A proof generated using the circuit, even if verified, doesn't ensure that the p
 - The `assetsSum` (input of the circuit) must be the total assets of the exchange. The way in which the exchange generates its proof of assets is out of the scope of this project.
 - The `leafHash` (output of the circuit) must equal to `H(username, balance)` that contains the data of the user to which the proof is being generated for
 
+
+## Workflow of the Circom Compiler and it's Dependencies
+
+![image](https://github.com/teamHITK/zkExchange/assets/80243668/8c6b0b3a-8b16-49bd-893d-f621c8bdfa93)
 ## Required Dependency
 
-- [circom](
+- [circom](https://docs.circom.io/)
 
 ## Build
 
