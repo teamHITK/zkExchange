@@ -36,7 +36,7 @@ The prover system guarantees credible and self-auditable proof while preserving 
 - Siblings partial sum balances
 - Total liabilities of the exchange
 
-The prover relies on [pyt-merkle-sum-tree](https://github.com/pan-y-tomate/pyt-merkle-sum-tree) for the Merkle Sum tree operations.
+The prover relies on [zkDataPrep](https://github.com/teamHITK/zkExchange/tree/master/zkDataPrep) for the Merkle Sum tree operations.
 
 ## Circuit Design
 
