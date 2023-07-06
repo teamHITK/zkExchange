@@ -54,7 +54,12 @@ The prover relies on [zkDataPrep](https://github.com/teamHITK/zkExchange/tree/ma
 | -------- | ----------------------------------- | ------------------- |
 | leafHash | Poseidon Hash `H(username,balance)` | Public (by default) |
 
-![circuit illustration](./imgs/pos.png)
+![image](https://github.com/teamHITK/zkExchange/assets/80243668/20e61f60-71ce-4781-8c86-10561a8eb133)
+
+## Workflow of the Circom Compiler and it's Dependencies
+
+![image](https://github.com/teamHITK/zkExchange/assets/80243668/8c6b0b3a-8b16-49bd-893d-f621c8bdfa93)
+
 
 The `ToLeafHash` component performs the poseidon hash of the `username` and the `balance` and outputs the `leafHash`. The `leafHash` is then used as the first `hash` in the `NextMerkleSumTreeLevel` component.
 
