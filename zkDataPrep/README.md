@@ -21,7 +21,7 @@ This diagram is a representation of a similar Merkle Sum Tree
 
 ## Hashing Algorihtm
 
-In this implementation we're using [Poseidon Hash](https://eprint.iacr.org/2019/458.pdf), a zkSNARK friendly hashing algorithm introduced in 2019. 
+In this implementation we're using [Poseidon Hash](https://eprint.iacr.org/2019/458.pdf), a zkSNARK friendly hashing algorithm introduced in 2019, compatible with Secure Multi-Party Computation (MPC). 
 
 ### Why Poseidon?
 
