@@ -19,6 +19,23 @@ This diagram is a representation of a similar Merkle Sum Tree
 
 ![image](https://github.com/teamHITK/zkExchange/assets/80243668/49f3907f-4357-4967-8914-6a6de76fb78d)
 
+## Hashing Algorihtm
+
+In this implementation we're using [Poseidon Hash](https://eprint.iacr.org/2019/458.pdf), a zkSNARK friendly hashing algorithm introduced in 2019. 
+
+### Why Poseidon?
+
+- Permutation-based Design: Poseidon Hash is built upon a permutation-based design, utilizing a series of permutation rounds to process the input data. The permutation function employed in Poseidon is based on the Merkle-Damgård construction.
+
+- Customizable Parameters: Poseidon allows for customizable parameters, such as the number of permutation rounds, the number of words processed per round, and the size of the internal state. These parameters can be adjusted depending on the specific security requirements and performance considerations of the application.
+
+- Efficient Arithmetic Circuit Implementation: Poseidon is highly optimized for arithmetic circuits commonly used in zk-SNARKs. It exhibits efficient behavior when implemented within these circuits, offering faster computation times and reduced circuit sizes compared to other hash functions.
+
+- Resistance to Cryptographic Attacks: Poseidon has undergone extensive analysis and evaluation for security. It has been designed to resist known cryptographic attacks, including differential and linear attacks. However, as with any cryptographic primitive, ongoing analysis and scrutiny are essential to ensure its continued security.
+
+- Trusted Setup Compatibility: Poseidon is compatible with trusted setup procedures commonly used in certain zk-SNARK constructions. The structure of Poseidon allows for efficient and secure generation of the necessary cryptographic parameters during the trusted setup phase.
+
+- Multiple Variants: Poseidon comes in different variants, such as Poseidon-128, Poseidon-192, and Poseidon-256, which differ in the number of rounds and the width of the internal state. These variants offer flexibility in choosing the appropriate security level and performance trade-offs.
 ## Setup
 
 ### Installing the package
