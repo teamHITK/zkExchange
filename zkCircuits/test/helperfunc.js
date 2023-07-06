@@ -4,7 +4,7 @@ function createCircomInput(merkleProof, assetsSum) {
     username: merkleProof.entry.usernameToBigInt,
     balance: merkleProof.entry.balance,
     pathIndices: merkleProof.pathIndices,
-    siblingHashes: merkleProof.siblingHashes,
+    siblingsHashes: merkleProof.siblingsHashes,
     siblingsSums: merkleProof.siblingsSums,
     assetsSum,
   };

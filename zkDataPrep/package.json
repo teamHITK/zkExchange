@@ -1,6 +1,6 @@
 {
   "name": "@0xagnish/zk-data-prep",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "author": "Agnish Ghosh",
   "license": "GPL-3.0",
   "main": "dist/index.js",

@@ -42,17 +42,17 @@ template Addup(){
 }
 
 template LessThanEqual (n){
-    assert (n <= 252);
+    assert(n <= 252);
     signal input in[2];
     signal output out;
 
-    component x1inRange = Num2Bits(n);
-    x1inRange.in <== in[0];
-    component x2inRange = Num2Bits(n);
-    x2inRange.in <== in[1];
+    component aInRange = Num2Bits(n);
+    aInRange.in <== in[0];
+    component bInRange = Num2Bits(n);
+    bInRange.in <== in[1];
 
     component lt = LessThan(n);
-    
+
     lt.in[0] <== in[0];
     lt.in[1] <== in[1] + 1;
 
