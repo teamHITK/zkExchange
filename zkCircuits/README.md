@@ -87,6 +87,15 @@ A proof generated using the circuit, even if verified, doesn't ensure that the p
 
 - [circom](https://docs.circom.io/)
 
+## Setup
+
+### Installing the package
+
+- The package can be directly installed from the npm registry with the following command:
+  ```
+  $ npm i @0xagnish/zk-data-prep
+  ```
+
 ## Build
 
 In order to compile the circuit, execute the trusted setup, generate the proof (and verify it) using groth16 as proving system run from the root directory:
