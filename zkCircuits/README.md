@@ -87,8 +87,8 @@ A proof generated using the circuit, even if verified, doesn't ensure that the p
 
 In order to compile the circuit, execute the trusted setup, generate the proof (and verify it) using groth16 as proving system run from the root directory:
 
-    ```bash
-    npm run build
+    ```
+    $ npm run build
     ```
 
 The script will:
@@ -117,13 +117,13 @@ The script will:
 
 To run the tests, run the following command:
 
-```bash
-npm test
+```
+$ npm test
 ```
 
 ## Benchmarks
 
-All benchmarks are run on a Macbook Air M1, 2020 AWS, 8GB memory. The benchmark was run on a Merkle Sum Tree with 16 levels (2^16 leaves).
+All benchmarks are run on a Ubuntu 22 LTS, 8GB memory. The benchmark was run on a Merkle Sum Tree with 16 levels (2^16 leaves).
 
 |                                    | **groth16** |
 | ---------------------------------- | ----------- |
