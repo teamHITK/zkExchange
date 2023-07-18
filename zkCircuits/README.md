@@ -86,6 +86,18 @@ A proof generated using the circuit, even if verified, doesn't ensure that the p
 ## Required Dependency
 
 - [circom](https://docs.circom.io/)
+## Trusted Setup for Multi-party Computation
+
+The entire Trusted Setup is deployed over an `S3 bucket` on AWS, so that the same Trusted Setup can be re-used for secure MPC,  while building the zkSNARK circuit it automatically downloads the setup files from AWS.
+
+## Setup
+
+### Installing the package
+
+- The package can be directly installed from the npm registry with the following command:
+  ```
+  $ npm i @0xagnish/zkCircuits
+  ```
 
 ## Build
 
