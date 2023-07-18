@@ -9,9 +9,9 @@ exports.p = Scalar.fromString(
 );
 const Fr = new F1Field(exports.p);
 
-const { MerkleSumTree } = require("0xagnish/zk-data-prep");
+const { MerkleSumTree } = require("pyt-merkle-sum-tree");
 
-const createCircomInput = require("./helperfunc.js");
+const createCircomInput = requirye("./helperfunc.js");
 
 describe("Circuit Testing", function async() {
   const pathToCsv = "test/entryPatterns/entry-16.csv";
@@ -74,7 +74,7 @@ describe("Circuit Testing", function async() {
       assert.equal(e.message.slice(0, 21), "Error: Assert Failed.");
       assert.equal(
         e.message.slice(22, 59),
-        "Error in template proofOfSolvency16 line: 65"
+        "Error in template PytPos_154 line: 65"
       );
     }
   });
@@ -84,17 +84,15 @@ describe("Circuit Testing", function async() {
     console.log("Adding a fake user intentionally!");
     input.username = BigInt(123456789);
     try {
-      console.log("Computing the leaf hashes of the given user data");
-      console.log("Calculating the witness....");
       let witness = await circuit.calculateWitness(input);
       await circuit.checkConstraints(witness);
-      console.log("Proof Not Verified!");
+
       assert(false);
     } catch (e) {
       assert.equal(e.message.slice(0, 21), "Error: Assert Failed.");
       assert.equal(
         e.message.slice(22, 59),
-        "Error in template proofOfSolvency16 line: 59"
+        "Error in template PytPos_154 line: 59"
       );
     }
   });
@@ -104,17 +102,15 @@ describe("Circuit Testing", function async() {
     console.log("Adding an invalid root intentionally!");
     input.rootHash = input.rootHash + 1n;
     try {
-      console.log("Computing the leaf hashes of the given user data");
-      console.log("Calculating the witness....");
       let witness = await circuit.calculateWitness(input);
       await circuit.checkConstraints(witness);
-      console.log("Proof Not Verified!");
+
       assert(false);
     } catch (e) {
       assert.equal(e.message.slice(0, 21), "Error: Assert Failed.");
       assert.equal(
         e.message.slice(22, 59),
-        "Error in template proofOfSolvency16 line: 59"
+        "Error in template PytPos_154 line: 59"
       );
     }
   });
@@ -124,17 +120,15 @@ describe("Circuit Testing", function async() {
     console.log("Adding a balance that overflows 2**252 to the input!");
     input.balance = exports.p - 1n;
     try {
-      console.log("Computing the leaf hashes of the given user data");
-      console.log("Calculating the witness....");
       let witness = await circuit.calculateWitness(input);
       await circuit.checkConstraints(witness);
-      console.log("Proof Not Verified!");
+
       assert(false);
     } catch (e) {
       assert.equal(e.message.slice(0, 21), "Error: Assert Failed.");
       assert.equal(
         e.message.slice(22, 59),
-        "Error in template SafeCalc line: 33"
+        "Error in template Num2Bits_73 line: 3"
       );
     }
   });
@@ -146,17 +140,15 @@ describe("Circuit Testing", function async() {
     );
     input.balance = BigInt(2 ** 252) - 1n;
     try {
-      console.log("Computing the leaf hashes of the given user data");
-      console.log("Calculating the witness....");
       let witness = await circuit.calculateWitness(input);
       await circuit.checkConstraints(witness);
-      console.log("Proof Not Verified!");
+
       assert(false);
     } catch (e) {
       assert.equal(e.message.slice(0, 21), "Error: Assert Failed.");
       assert.equal(
         e.message.slice(22, 59),
-        "Error in template SafeCalc line: 33"
+        "Error in template Num2Bits_73 line: 3"
       );
     }
   });

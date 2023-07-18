@@ -2,9 +2,9 @@ pragma circom 2.1.3;
 
 include "../node_modules/circomlib/circuits/poseidon.circom";
 
-//taking input of user entry as (username and balance) and outputs a hash of it (leafHash)
+// Takes a user entry as input (username, balance) and outputs a hash of it (leafHash)
+template ToLeafHash() {
 
-template ToLeafHash(){
     signal input username;
     signal input balance;
 
@@ -18,14 +18,14 @@ template ToLeafHash(){
     out <== poseidonHasher.out;
 }
 
+template PoseidonHasher(nInputs) {
 
-template PoseidonHasher(n){
-    signal input in[n];
+    signal input in[nInputs];
     signal output out;
 
-    component hasher = Poseidon(n);
+    component hasher = Poseidon(nInputs);
 
-    for(var i=0 ; i < n;i++){
+    for (var i = 0; i < nInputs; i ++) {
         hasher.inputs[i] <== in[i];
     }
 
