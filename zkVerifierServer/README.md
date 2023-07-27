@@ -57,4 +57,23 @@ $ npm install 0xagnish/zkCircuits
 
 ## generateProof (user index number : int) : FullProof
 
-Generates a Proof-of-Solvency proof for a specific user
+Generates a Proof-of-Solvency proof for a specific user in the Merkle Sum Tree.
+
+```ts
+const userIndex = 0;
+const proof = await prover.generateProofForUser(userIndex);
+```
+
+# APIs -> UserVerifier
+
+## new UserVerifier (username: string, balance: uint, verificationKey: JSON) : UserVerifier
+
+```ts
+import { UserVerifier } from "0xagnish/zkVerifierServer";
+
+const username = "randome-string";
+const balance = BigInt(2204);
+const verificationKey = require("...add the file path to the verification key...");
+
+const userVerifier = new UserVerifier(username, balance, verificationKey);
+```
