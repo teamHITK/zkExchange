@@ -6,8 +6,8 @@ export type CircomInput = {
   balance: bigint;
   pathIndices: number[];
   siblingsHashes: bigint[];
-  siblingSums: bigint[];
-  assetsSums: bigint;
+  siblingsSums: bigint[];
+  assetsSum: bigint;
 };
 
 export type Proof = {

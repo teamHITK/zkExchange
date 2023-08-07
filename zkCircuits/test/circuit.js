@@ -11,7 +11,7 @@ const Fr = new F1Field(exports.p);
 
 const { MerkleSumTree } = require("pyt-merkle-sum-tree");
 
-const createCircomInput = requirye("./helperfunc.js");
+const createCircomInput = require("./helperfunc.js");
 
 describe("Circuit Testing", function async() {
   const pathToCsv = "test/entryPatterns/entry-16.csv";
