@@ -1,4 +1,17 @@
 {
+  "name": "@0xagnish/zkverifier",
+  "author": "Agnish Ghosh",
+  "version": "1.0.0",
+  "license": "GPL-3.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "keywords": [
+    "zk",
+    "zero-knowledge",
+    "circomlibjs",
+    "circom",
+    "snarkjs"
+  ],
   "devDependencies": {
     "@types/jest": "^29.4.0",
     "jest": "^29.4.1",
@@ -13,6 +26,10 @@
     "@0xagnish/zkcircuits": "^1.0.1",
     "circomlibjs": "^0.0.8",
     "pyt-merkle-sum-tree": "^0.0.21",
-    "snarkjs": "^0.5.0"
+    "snarkjs": "^0.7.0"
+  },
+  "description": "The purpose of this module is to put the zkSNARK into a proper feasible workflow.",
+  "scripts": {
+    "build": "tsc"
   }
 }
