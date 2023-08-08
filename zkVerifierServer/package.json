@@ -5,6 +5,9 @@
   "license": "GPL-3.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "directories": {
+    "test": "test"
+  },
   "keywords": [
     "zk",
     "zero-knowledge",
@@ -24,12 +27,21 @@
   "dependencies": {
     "@0xagnish/zk-data-prep": "^0.0.4",
     "@0xagnish/zkcircuits": "^1.0.1",
+    "@types/mocha": "^10.0.1",
     "circomlibjs": "^0.0.8",
     "pyt-merkle-sum-tree": "^0.0.21",
     "snarkjs": "^0.7.0"
   },
   "description": "The purpose of this module is to put the zkSNARK into a proper feasible workflow.",
   "scripts": {
-    "build": "tsc"
+    "test": "jest --config jestconfig.json",
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
+    "lint": "tslint -p tsconfig.json",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
   }
 }
